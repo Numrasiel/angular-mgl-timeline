@@ -1,6 +1,6 @@
 import {HostBinding, ViewEncapsulation} from '@angular/core';
 import { MglTimelineEntrySideComponent } from './../timeline-entry-side/timeline-entry-side.component';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { MglTimelineEntryDotComponent } from './../timeline-entry-dot/timeline-entry-dot.component';
 import {
   Component, AfterViewInit, Output, EventEmitter, ContentChild, OnDestroy, ElementRef
@@ -52,10 +52,10 @@ export class MglTimelineEntryComponent implements AfterViewInit, OnDestroy {
   @Output()
   animationDone = new EventEmitter<string>();
 
-  @ContentChild(MglTimelineEntryContentComponent) content: MglTimelineEntryContentComponent;
-  @ContentChild(MglTimelineEntryHeaderComponent) header: MglTimelineEntryHeaderComponent;
-  @ContentChild(MglTimelineEntryDotComponent) dot: MglTimelineEntryDotComponent;
-  @ContentChild(MglTimelineEntrySideComponent) side: MglTimelineEntrySideComponent;
+  @ContentChild(MglTimelineEntryContentComponent,{static:false}) content: MglTimelineEntryContentComponent;
+  @ContentChild(MglTimelineEntryHeaderComponent,{static:false}) header: MglTimelineEntryHeaderComponent;
+  @ContentChild(MglTimelineEntryDotComponent,{static:false}) dot: MglTimelineEntryDotComponent;
+  @ContentChild(MglTimelineEntrySideComponent,{static:false}) side: MglTimelineEntrySideComponent;
 
   constructor(private elementRef: ElementRef) { }
 
