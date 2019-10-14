@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'mgl-timeline-entry-side',

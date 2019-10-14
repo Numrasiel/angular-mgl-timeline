@@ -1,7 +1,8 @@
 import { QueryList, ElementRef, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
 import { MglTimelineEntryComponent } from './../timeline-entry/timeline-entry.component';
-import { Component, Input, ContentChildren, AfterViewInit, EventEmitter, Output, HostListener, OnChanges, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
+import { Component, Input, ContentChildren, AfterViewInit, HostListener, OnChanges, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/internal/Subscription';
+
 @Component({
   selector: 'mgl-timeline',
   templateUrl: './timeline.component.html',
